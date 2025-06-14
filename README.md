@@ -1,2 +1,3 @@
 # Vanilla-UI
- User Interface with vanilla HTML, CSS and JavaScript
+
+User Interface with vanilla HTML, CSS and JavaScript
