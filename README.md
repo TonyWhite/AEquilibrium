@@ -28,4 +28,4 @@ If you want to import only a component, you can import this:
 
 ## Documentation
 
-Currently the documentation is located in the `examples` folder.
+Currently the documentation is located in the `doc` folder.
