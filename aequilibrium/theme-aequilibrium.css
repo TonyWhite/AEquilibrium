@@ -5,6 +5,9 @@ palette-aequilibrium.css
 
 @charset "UTF-8";
 @import url('https://fonts.bunny.net/css?family=Exo+2:300,300i,400,700,700i&display=swap'); /* Exo 2*/
+@import url(https://fonts.bunny.net/css?family=overpass:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i); /* Overpass */
+@import url(https://fonts.bunny.net/css?family=cantarell:400,400i,700,700i); /* Cantarell */
+@import url(https://fonts.bunny.net/css?family=julius-sans-one:400); /* Julius Sans One */
 @import url('https://fonts.bunny.net/css?family=Fira+Code:300,400,700&display=swap'); /* Fira Code */
 @import url('https://fonts.bunny.net/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Color+Emoji&display=swap'); /* Noto Color Emoji */      
 @font-face {
@@ -20,24 +23,33 @@ palette-aequilibrium.css
 }
 
 :root {
-  --text-font: "Exo 2", sans-serif, "Noto Color Emoji";
-  --title-font: "Exo 2", sans-serif, "Noto Color Emoji";
+  --title-font: "Julius Sans One", sans-serif, "Noto Color Emoji";
+  --text-font: "Overpass", sans-serif, "Noto Color Emoji";
   --monospace-font: "Fira Code", monospace, "Noto Color Emoji";
   --password-font: "password-line", var(--text-font);
 }
 
 body {
   font-family: var(--text-font);
+  font-weight: 400;
   font-size: 100%;
 }
 
 h1,h2,h3,h4,h5,h6 {
+  font-family: var(--title-font);
+  font-weight: 700;
   color: var(--accent);
+  padding-bottom: 0.1em;
 }
 
-hr {
+h1,hr {
   border: none;
   border-bottom: 1px solid color-mix(in oklch, var(--dimmed), transparent);
+}
+
+h2 {
+  border: none;
+  border-bottom: 1px solid color-mix(in oklch, var(--dimmed), transparent 75%);
 }
 
 /**************/
