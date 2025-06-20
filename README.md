@@ -1,5 +1,7 @@
 # Vanilla-UI
 
+[![Static Badge](https://img.shields.io/badge/License-CC%20BY--SA%204.0-white)](https://creativecommons.org/licenses/by-sa/4.0/)
+
 ![Static Badge](https://img.shields.io/badge/Version-pre--alpha-red)
 ![Static Badge](https://img.shields.io/badge/Status-Work%20in%20progress-red)
 
@@ -28,4 +30,4 @@ If you want to import only a component, you can import this:
 
 ## Documentation
 
-Currently the documentation is located in the `doc` folder.
+Currently the documentation is located in the `docs` folder.
