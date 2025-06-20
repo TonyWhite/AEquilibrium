@@ -1,4 +1,4 @@
-class VanillaPanelLayered {
+class AEquilibriumPanelLayered {
   static changeLayer(from, to) {
     from.setAttribute("hide", from.getAttribute("no-hide"));
     from.removeAttribute("no-hide");

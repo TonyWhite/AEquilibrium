@@ -5,7 +5,7 @@
 
 ## Description
 
-The `[ui=vanilla].panel-layered` element is a container for overlapping layers.
+The `[ui=aequilibrium].panel-layered` element is a container for overlapping layers.
 
 ## Overview
 
@@ -16,7 +16,7 @@ The `[ui=vanilla].panel-layered` element is a container for overlapping layers.
 **A Menu**
 
 ```html
-<div ui="vanilla" class="panel-layered"> <!-- The container -->
+<div ui="aequilibrium" class="panel-layered"> <!-- The container -->
   <div no-hide="">Lorem ipsum</div>      <!-- The child that is visible -->
   <div hide="left">Menu</div>            <!-- The child that is invisible, unselectable and ignore events -->
   <button no-hide=""></button>           <!-- The button that remains on top, to show/hide the menu -->

@@ -1,6 +1,8 @@
 # Philosophy
 
-This is not a toolkit. This is an asset.
+AEquilibrium is an assets collection with the goal to became modular and usable for web applications.
+
+This is not a toolkit.
 
 It is created to be:
 - Developer friendly

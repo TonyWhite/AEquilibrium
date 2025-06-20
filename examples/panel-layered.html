@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <title>Title</title>
-    <link rel="stylesheet" href="../vanilla-ui/panel-layered.css">
-    <script src="../vanilla-ui/panel-layered.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked-highlight/lib/index.umd.js"></script>
+    <link rel="stylesheet" href="../aequilibrium/palette-aequilibrium.css">
+    <link rel="stylesheet" href="../aequilibrium/panel-layered.css">
+    <script src="../aequilibrium/panel-layered.js"></script>
     <style>
       body {
         font-family: "Arial", sans-serif;
@@ -34,16 +33,16 @@
       }
     </style>
   </head>
-  <body>
-    <div ui="vanilla" class="panel-layered" style="height:100%;">
-      <div class="flex-column" no-hide="up" style="background-color:tomato;">
+  <body palette="aequilibrium" palette_type="light">
+    <div ui="aequilibrium" class="panel-layered" style="height:100%;">
+      <div class="flex-column" no-hide="up" style="background-color:var(--red);">
         <h1>1<sup>st</sup> panel</h1>
         <label>This panel hides up</label>
         <div class="flex-row">
           <button onclick="clickNextPanel(this)">Next panel</button>
         </div>
       </div>
-      <div class="flex-column" hide="down"  style="background-color:orange;">
+      <div class="flex-column" hide="down"  style="background-color:var(--orange);">
         <h1>2<sup>nd</sup> panel</h1>
         <label>This panel hides down</label>
         <div class="flex-row">
@@ -51,7 +50,7 @@
           <button onclick="clickNextPanel(this)">Next panel</button>
         </div>
       </div>
-      <div class="flex-column" hide="left"  style="background-color:mediumseagreen;">
+      <div class="flex-column" hide="left"  style="background-color:var(--green);">
         <h1>3<sup>rd</sup> panel</h1>
         <label>This panel hides left</label>
         <div class="flex-row">
@@ -59,7 +58,7 @@
           <button onclick="clickNextPanel(this)">Next panel</button>
         </div>
       </div>
-      <div class="flex-column" hide="right"  style="background-color:lightblue;">
+      <div class="flex-column" hide="right"  style="background-color:var(--cyan);">
         <h1>4<sup>th</sup> panel</h1>
         <label>This panel hides right</label>
         <div class="flex-row">
@@ -67,7 +66,7 @@
           <button onclick="clickNextPanel(this)">Next panel</button>
         </div>
       </div>
-      <div class="flex-column" hide="transparent"  style="background-color:dodgerblue;">
+      <div class="flex-column" hide="transparent"  style="background-color:var(--blue);">
         <h1>5<sup>th</sup> panel</h1>
         <label>This panel hides transparent</label>
         <div class="flex-row">
@@ -75,7 +74,7 @@
           <button onclick="clickNextPanel(this)">Next panel</button>
         </div>
       </div>
-      <div class="flex-column" hide="fly"  style="background-color:magenta;">
+      <div class="flex-column" hide="fly"  style="background-color:var(--purple);">
         <h1>6<sup>th</sup> panel</h1>
         <label>This panel hides fly</label>
         <div class="flex-row">
@@ -83,7 +82,7 @@
           <button onclick="clickNextPanel(this)">Next panel</button>
         </div>
       </div>
-      <div class="flex-column" hide="rotate-top-left"  style="background-color:tomato;">
+      <div class="flex-column" hide="rotate-top-left"  style="background-color:var(--pink);">
         <h1>7<sup>th</sup> panel</h1>
         <label>This panel hides rotate-top-left</label>
         <div class="flex-row">
@@ -91,7 +90,7 @@
           <button onclick="clickNextPanel(this)">Next panel</button>
         </div>
       </div>
-      <div class="flex-column" hide="rotate-top-right"  style="background-color:orange;">
+      <div class="flex-column" hide="rotate-top-right"  style="background-color:var(--red);">
         <h1>8<sup>th</sup> panel</h1>
         <label>This panel hides rotate-top-right</label>
         <div class="flex-row">
@@ -99,7 +98,7 @@
           <button onclick="clickNextPanel(this)">Next panel</button>
         </div>
       </div>
-      <div class="flex-column" hide="rotate-bottom-left"  style="background-color:mediumseagreen;">
+      <div class="flex-column" hide="rotate-bottom-left"  style="background-color:var(--orange);">
         <h1>9<sup>th</sup> panel</h1>
         <label>This panel hides rotate-bottom-left</label>
         <div class="flex-row">
@@ -107,7 +106,7 @@
           <button onclick="clickNextPanel(this)">Next panel</button>
         </div>
       </div>
-      <div class="flex-column" hide="rotate-bottom-right"  style="background-color:lightblue;">
+      <div class="flex-column" hide="rotate-bottom-right"  style="background-color:var(--yellow);">
         <h1>10<sup>th</sup> panel</h1>
         <label>This panel hides rotate-bottom-right</label>
         <div class="flex-row">
@@ -120,13 +119,13 @@
         let layer = target.closest(".panel-layered > [no-hide]");
         let container = layer.parentElement;
         let nextLayer = layer.nextElementSibling;
-        if(nextLayer) VanillaPanelLayered.changeLayer(layer, nextLayer);
+        if(nextLayer) AEquilibriumPanelLayered.changeLayer(layer, nextLayer);
       }
       function clickPrevPanel(target) {
         let layer = target.closest(".panel-layered > [no-hide]");
         let container = layer.parentElement;
         let previousLayer = layer.previousElementSibling;
-        if(previousLayer) VanillaPanelLayered.changeLayer(layer, previousLayer);
+        if(previousLayer) AEquilibriumPanelLayered.changeLayer(layer, previousLayer);
       }
     </script>
   </body>

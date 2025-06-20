@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Palette Æquilibrium</title>
+    <link rel="stylesheet" href="../aequilibrium/palette-aequilibrium.css">
+    <style>
+      body {
+        text-align: center;
+      }
+      table {
+        border: none;
+        border-collapse: collapse;
+        margin: auto;
+      }
+      table td {
+        padding: 0.5em;
+        white-space: nowrap;
+      }
+      table tr:first-child td {
+        border-top: 1px solid var(--foreground);
+      }
+      table tr:last-child td {
+        border-bottom: 1px solid var(--foreground);
+      }
+      table tr td:first-child {
+        border-left: 1px solid var(--foreground);
+      }
+      table tr td:last-child {
+        border-right: 1px solid var(--foreground);
+      }
+      table tr:nth-child(1) td { color:var(--red); }
+      table tr:nth-child(2) td { color:var(--orange); }
+      table tr:nth-child(3) td { color:var(--yellow); }
+      table tr:nth-child(4) td { color:var(--green); }
+      table tr:nth-child(5) td { color:var(--cyan); }
+      table tr:nth-child(6) td { color:var(--blue); }
+      table tr:nth-child(7) td { color:var(--purple); }
+      table tr:nth-child(8) td { color:var(--pink); }
+      table tr td:nth-child(1) { background-color:var(--background);}
+      table tr td:nth-child(2) { background-color:var(--background-1);}
+      table tr td:nth-child(3) { background-color:var(--background-2);}
+      table tr td:nth-child(4) { background-color:var(--background-3);}
+      table tr td:nth-child(5) { background-color:var(--background-4);}
+    </style>
+  </head>
+  <body palette="aequilibrium" palette_type="light">
+    <h1>Palette Æquilibrium</h1>
+    <hr>
+    <img alt="Static Badge" src="https://img.shields.io/badge/Version-pre--alpha-red">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Status-Work%20in%20progress-red">
+    <h2>The light type</h2>
+    <table palette_type="light">
+      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+    </table>
+    <h2>The dark type</h2>
+    <table palette_type="dark">
+      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+    </table>
+  </body>
+</html>
