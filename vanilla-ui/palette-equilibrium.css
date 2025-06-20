@@ -1,0 +1,101 @@
+[palette="equilibrium"] {
+  --light-red:    #FF3926;      --dark-red:     #ff4d3c;
+  --light-orange: #FD941C;      --dark-orange:  #ff7b00;
+  --light-yellow: #E3C501;      --dark-yellow:  #e9ac00;
+  --light-green:  #A6E22C;      --dark-green:   #00a500;
+  --light-cyan:   #67D8EF;      --dark-cyan:    #00a6ad;
+  --light-blue:   #239DD5;      --dark-blue:    #4090ff;
+  --light-purple: #9B6AFA;      --dark-purple:  #ba69ff;
+  --light-pink:   #D348D0;      --dark-pink:    #f65df4;
+  --black:        #232323;      --white:        #F6F6F6;
+  --dark-1:       #282828;      --light-1:      #F1F1F1;
+  --dark-2:       #2D2D2D;      --light-2:      #EBEBEB;
+  --dark-3:       #323232;      --light-3:      #E8E8E8;
+  --dark-4:       #373737;      --light-4:      #E2E2E2;
+  --dimmed: color-mix(in oklch, var(--light-4), var(--dark-4));
+}
+[palette_type="dark"] {
+  /* Accents */
+  --red:          var(--light-red);
+  --orange:       var(--light-orange);
+  --yellow:       var(--light-yellow);
+  --green:        var(--light-green);
+  --cyan:         var(--light-cyan);
+  --blue:         var(--light-blue);
+  --purple:       var(--light-purple);
+  --pink:         var(--light-pink);
+  --accent:       var(--white);
+  /* Background */
+  --background:   var(--black);
+  --background-1: var(--dark-1);
+  --background-2: var(--dark-2);
+  --background-3: var(--dark-3);
+  --background-4: var(--dark-4);
+  /* Foreground */
+  --foreground:   var(--white);
+  --foreground-1: var(--light-1);
+  --foreground-2: var(--light-2);
+  --foreground-3: var(--light-3);
+  --foreground-4: var(--light-4);
+}
+[palette_type="light"] {
+  /* Accents */
+  --red:          var(--dark-red);
+  --orange:       var(--dark-orange);
+  --yellow:       var(--dark-yellow);
+  --green:        var(--dark-green);
+  --cyan:         var(--dark-cyan);
+  --blue:         var(--dark-blue);
+  --purple:       var(--dark-purple);
+  --pink:         var(--dark-pink);
+  --accent:       var(--black);
+  /* Background */
+  --background:   var(--white);
+  --background-1: var(--light-1);
+  --background-2: var(--light-2);
+  --background-3: var(--light-3);
+  --background-4: var(--light-4);
+  /* Foreground */
+  --foreground:   var(--black);
+  --foreground-1: var(--dark-1);
+  --foreground-2: var(--dark-2);
+  --foreground-3: var(--dark-3);
+  --foreground-4: var(--dark-4);
+}
+
+[palette_accent="red"]    {--accent:var(--red);}
+[palette_accent="orange"] {--accent:var(--orange);}
+[palette_accent="yellow"] {--accent:var(--yellow);}
+[palette_accent="green"]  {--accent:var(--green);}
+[palette_accent="cyan"]   {--accent:var(--cyan);}
+[palette_accent="blue"]   {--accent:var(--blue);}
+[palette_accent="purple"] {--accent:var(--purple);}
+[palette_accent="pink"]   {--accent:var(--pink);}
+
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+/**************/
+/* INPUT TEXT */
+/**************/
+input[type=text],
+input[type=password] {
+  background: var(--background);
+  color: var(--foreground);
+  border-color: 1px solid var(--dimmed);
+  box-shadow: 0 1px 5px var(--background);
+}
+input[type=text]:focus,
+input[type=password]:focus {
+  outline-color: var(--accent);
+}
+input[type=text] {
+  font-family: var(--font-normal);
+}
