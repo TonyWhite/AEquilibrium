@@ -36,8 +36,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 hr {
-  box-shadow: 0 0 0 0.5px color-mix(in oklch, var(--dimmed), transparent);
   border: none;
+  border-bottom: 1px solid color-mix(in oklch, var(--dimmed), transparent);
 }
 
 /**************/
