@@ -1,0 +1,67 @@
+/*
+Dependencies:
+palette-equilibrium.css
+*/
+
+@charset "UTF-8";
+@import url('https://fonts.bunny.net/css?family=Exo+2:300,300i,400,700,700i&display=swap'); /* Exo 2*/
+@import url('https://fonts.bunny.net/css?family=Fira+Code:300,400,700&display=swap'); /* Fira Code */
+@import url('https://fonts.bunny.net/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Color+Emoji&display=swap'); /* Noto Color Emoji */      
+@font-face {
+  font-family: 'password-line';
+  src: url('./fonts/password-line.eot?96877785');
+  src: url('./fonts/password-line.eot?96877785#iefix') format('embedded-opentype'),
+       url('./fonts/password-line.woff2?96877785') format('woff2'),
+       url('./fonts/password-line.woff?96877785') format('woff'),
+       url('./fonts/password-line.ttf?96877785') format('truetype'),
+       url('./fonts/password-line.svg?96877785#password-line') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --text-font: "Exo 2", sans-serif, "Noto Color Emoji";
+  --title-font: "Exo 2", sans-serif, "Noto Color Emoji";
+  --monospace-font: "Fira Code", monospace, "Noto Color Emoji";
+  --password-font: "password-line", var(--text-font);
+}
+
+body {
+  font-family: var(--text-font);
+  font-size: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: var(--accent);
+}
+
+hr {
+  box-shadow: 0 0 0 0.5px color-mix(in oklch, var(--dimmed), transparent);
+  border: none;
+}
+
+/**************/
+/* INPUT TEXT */
+/**************/
+input[type=text],
+input[type=password] {
+  border: 1px solid var(--dimmed);
+  border-radius: 1vh;
+  text-align: center;
+  /* Outline */
+  outline: none;
+  outline-color: transparent;
+  outline-offset: 0;
+  outline-style: solid;
+  outline-width: 0.15em;
+  transition-duration: 0.2s;
+  transition-property: outline-color;
+}
+input[type=password] {
+  font-family: var(--password-font);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  letter-spacing: 0;
+}
