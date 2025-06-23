@@ -1,17 +1,17 @@
 [palette="aequilibrium"] {
-  --light-red:    #FF3926;      --dark-red:     #FF4D3C;
-  --light-orange: #FD941C;      --dark-orange:  #FF7B00;
-  --light-yellow: #FFD700;      --dark-yellow:  #DAA520;
-  --light-green:  #A6E22C;      --dark-green:   #00A500;
-  --light-cyan:   #67D8EF;      --dark-cyan:    #00A6AD;
-  --light-blue:   #239DD5;      --dark-blue:    #4090FF;
-  --light-purple: #9B6AFA;      --dark-purple:  #BA69FF;
-  --light-pink:   #D348D0;      --dark-pink:    #F65DF4;
-  --black:        #232323;      --white:        #F6F6F6;
-  --dark-1:       #282828;      --light-1:      #F1F1F1;
-  --dark-2:       #2D2D2D;      --light-2:      #EBEBEB;
-  --dark-3:       #323232;      --light-3:      #E8E8E8;
-  --dark-4:       #373737;      --light-4:      #E2E2E2;
+  --light-red:     #FF3926;      --dark-red:      #FF4D3C;
+  --light-orange:  #FD941C;      --dark-orange:   #FF7B00;
+  --light-yellow:  #FFD700;      --dark-yellow:   #DAA520;
+  --light-green:   #A6E22C;      --dark-green:    #00A500;
+  --light-cyan:    #67D8EF;      --dark-cyan:     #00A6AD;
+  --light-blue:    #239DD5;      --dark-blue:     #4090FF;
+  --light-purple:  #9B6AFA;      --dark-purple:   #BA69FF;
+  --light-magenta: #D348D0;      --dark-magenta:  #F65DF4;
+  --black:         #232323;      --white:         #F6F6F6;
+  --dark-1:        #282828;      --light-1:       #F1F1F1;
+  --dark-2:        #2D2D2D;      --light-2:       #EBEBEB;
+  --dark-3:        #323232;      --light-3:       #E8E8E8;
+  --dark-4:        #373737;      --light-4:       #E2E2E2;
   --dimmed: color-mix(in oklch, var(--light-4), var(--dark-4));
 }
 [palette_type="dark"] {
@@ -23,7 +23,7 @@
   --cyan:         var(--light-cyan);
   --blue:         var(--light-blue);
   --purple:       var(--light-purple);
-  --pink:         var(--light-pink);
+  --magenta:         var(--light-magenta);
   --accent:       var(--white);
   /* Background */
   --background:   var(--black);
@@ -47,7 +47,7 @@
   --cyan:         var(--dark-cyan);
   --blue:         var(--dark-blue);
   --purple:       var(--dark-purple);
-  --pink:         var(--dark-pink);
+  --magenta:         var(--dark-magenta);
   --accent:       var(--black);
   /* Background */
   --background:   var(--white);
@@ -70,7 +70,7 @@
 [palette_accent="cyan"]   {--accent:var(--cyan);}
 [palette_accent="blue"]   {--accent:var(--blue);}
 [palette_accent="purple"] {--accent:var(--purple);}
-[palette_accent="pink"]   {--accent:var(--pink);}
+[palette_accent="magenta"]   {--accent:var(--magenta);}
 
 ::selection {
   background: var(--accent);
