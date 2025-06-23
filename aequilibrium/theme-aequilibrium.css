@@ -7,6 +7,7 @@ palette-aequilibrium.css
 @import url('https://fonts.bunny.net/css?family=Exo+2:300,300i,400,700,700i&display=swap'); /* Exo 2*/
 @import url(https://fonts.bunny.net/css?family=overpass:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i); /* Overpass */
 @import url(https://fonts.bunny.net/css?family=cantarell:400,400i,700,700i); /* Cantarell */
+@import url(https://fonts.bunny.net/css?family=andika:400,400i,700,700i); /* Andika */
 @import url(https://fonts.bunny.net/css?family=julius-sans-one:400); /* Julius Sans One */
 @import url('https://fonts.bunny.net/css?family=Fira+Code:300,400,700&display=swap'); /* Fira Code */
 @import url('https://fonts.bunny.net/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Color+Emoji&display=swap'); /* Noto Color Emoji */      
@@ -24,7 +25,7 @@ palette-aequilibrium.css
 
 :root {
   --title-font: "Julius Sans One", sans-serif, "Noto Color Emoji";
-  --text-font: "Cantarell", sans-serif, "Noto Color Emoji";
+  --text-font: "Andika", sans-serif, "Noto Color Emoji";
   --monospace-font: "Fira Code", monospace, "Noto Color Emoji";
   --password-font: "password-line", var(--text-font);
 }
