@@ -1,8 +1,6 @@
 class AEquilibriumPanelLayered {
   static changeLayer(from, to) {
-    from.setAttribute("hide", from.getAttribute("no-hide"));
-    from.removeAttribute("no-hide");
-    to.setAttribute("no-hide", to.getAttribute("hide"));
-    to.removeAttribute("hide");
+    AEquilibrium.renameAttribute(from,"no-hide","hide");
+    AEquilibrium.renameAttribute(to,"hide","no-hide");
   }
 }
