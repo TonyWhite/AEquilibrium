@@ -58,6 +58,7 @@ h2 {
 /**************/
 input[type=text],
 input[type=password] {
+  height: 1.7em;
   border: 1px solid var(--dimmed);
   border-radius: 100vmax;
   text-align: center;
@@ -78,7 +79,6 @@ input[type=password] {
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
-  padding: 0.287em;
   text-transform: none;
   letter-spacing: 0;
 }
