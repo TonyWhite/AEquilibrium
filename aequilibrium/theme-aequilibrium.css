@@ -33,6 +33,7 @@ palette-aequilibrium.css
 body {
   font-family: var(--text-font);
   font-weight: 400;
+  font-size: 14px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -61,7 +62,6 @@ input[type=password] {
   border: 1px solid var(--dimmed);
   border-radius: 100vmax;
   text-align: center;
-  font-size: 1rem;
   padding: 0.1em;
   margin: 0.2em;
   /* Outline */
