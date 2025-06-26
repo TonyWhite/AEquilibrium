@@ -1,6 +1,6 @@
 [palette="aequilibrium-deprecated"] {
   --light-red:     #FF3926;      --dark-red:      #C00004;
-  --light-orange:  #FD941C;      --dark-orange:   #FF7B00;
+  --light-orange:  #FF8000;      --dark-orange:   #f47600;
   --light-yellow:  #DCBB00;      --dark-yellow:   #DAA520;
   --light-green:   #A6E22C;      --dark-green:    #00A500;
   --light-cyan:    #67D8EF;      --dark-cyan:     #00A6AD;
@@ -15,19 +15,37 @@
   --dimmed: color-mix(in oklch, var(--light-4), var(--dark-4));
 }
 [palette="aequilibrium"] {
-  --light-red:     #FF3926;      --dark-red:      oklch(from red l calc(c * 0.8) h);
-  --light-orange:  #FF8000;      --dark-orange:   #f47600;
-  --light-yellow:  #DCBB00;      --dark-yellow:   #DAA520;
-  --light-green:   #A6E22C;      --dark-green:    #00A500;
-  --light-cyan:    #67D8EF;      --dark-cyan:     oklch(from cyan calc(l * 0.6) c h);
-  --light-blue:    #239DD5;      --dark-blue:     oklch(from blue calc(l * 1.5) c h);
-  --light-purple:  #9B6AFA;      --dark-purple:   #BA69FF;
-  --light-magenta: #D348D0;      --dark-magenta:  #F65DF4;
-  --black:         #232323;      --white:         #F6F6F6;
-  --dark-1:        #282828;      --light-1:       #F1F1F1;
-  --dark-2:        #2D2D2D;      --light-2:       #EBEBEB;
-  --dark-3:        #323232;      --light-3:       #E8E8E8;
-  --dark-4:        #373737;      --light-4:       #E2E2E2;
+  /* Accents for Light palette */
+  --dark-red:      oklch(from #FF0000 calc(l * 1.000) calc(c * 0.800) calc(h * 1.000)); /* #EB4435 */
+  --dark-orange:   oklch(from #FF8000 calc(l * 0.900) calc(c * 1.000) calc(h * 1.000)); /* #E56800 */
+  --dark-yellow:   oklch(from #FFFF00 calc(l * 0.776) calc(c * 0.696) calc(h * 0.764)); /* #DAA520 */
+  --dark-green:    oklch(from #00FF00 calc(l * 0.693) calc(c * 1.000) calc(h * 1.000)); /* #00A500 */
+  --dark-cyan:     oklch(from #00FFFF calc(l * 0.600) calc(c * 1.000) calc(h * 1.000)); /* #00898B */
+  --dark-blue:     oklch(from #0000FF calc(l * 1.500) calc(c * 1.000) calc(h * 1.000)); /* #2B7AFF */
+  --dark-purple:   oklch(from #8000FF calc(l * 1.277) calc(c * 0.746) calc(h * 1.042)); /* #BA69FF */
+  --dark-magenta:  oklch(from #FF00FF calc(l * 1.040) calc(c * 0.773) calc(h * 1.000)); /* #F65DF4 */
+  /* Accents for Dark palette */
+  --light-red:     oklch(from #FF0000 calc(l * 1.038) calc(c * 0.910) calc(h * 1.028)); /* #FF3926 */
+  --light-orange:  oklch(from #FF8000 calc(l * 1.000) calc(c * 1.000) calc(h * 1.000)); /* #FF8000 */
+  --light-yellow:  oklch(from #FFFF00 calc(l * 0.823) calc(c * 0.777) calc(h * 0.876)); /* #DCBB00 */
+  --light-green:   oklch(from #00FF00 calc(l * 0.971) calc(c * 0.696) calc(h * 0.892)); /* #A6E22B */
+  --light-cyan:    oklch(from #00FFFF calc(l * 0.911) calc(c * 0.693) calc(h * 1.093)); /* #67D8EF */
+  --light-blue:    oklch(from #0000FF calc(l * 1.455) calc(c * 0.392) calc(h * 0.957)); /* #5795DA */
+  --light-purple:  oklch(from #8000FF calc(l * 1.214) calc(c * 0.703) calc(h * 1.006)); /* #9B6AFA */
+  --light-magenta: oklch(from #FF00FF calc(l * 0.913) calc(c * 0.771) calc(h * 1.001)); /* #D73CD5 */
+  /* Background for Light palette */
+  --white:         oklch(from #FFFFFF calc(l * 0.973) calc(c * 1.000) calc(h * 1.000)); /* #F6F6F6 */
+  --light-1:       oklch(from #FFFFFF calc(l * 0.958) calc(c * 1.000) calc(h * 1.000)); /* #F1F1F1 */
+  --light-2:       oklch(from #FFFFFF calc(l * 0.940) calc(c * 1.000) calc(h * 1.000)); /* #EBEBEB */
+  --light-3:       oklch(from #FFFFFF calc(l * 0.931) calc(c * 1.000) calc(h * 1.000)); /* #E8E8E8 */
+  --light-4:       oklch(from #FFFFFF calc(l * 0.912) calc(c * 1.000) calc(h * 1.000)); /* #E2E2E2 */
+  /* Background for Dark palette */
+  --black:         oklch(from #000000 calc(l + 0.256) calc(c * 1.000) calc(h * 1.000)); /* #232323 */
+  --dark-1:        oklch(from #000000 calc(l + 0.276) calc(c * 1.000) calc(h * 1.000)); /* #282828 */
+  --dark-2:        oklch(from #000000 calc(l + 0.297) calc(c * 1.000) calc(h * 1.000)); /* #2D2D2D */
+  --dark-3:        oklch(from #000000 calc(l + 0.317) calc(c * 1.000) calc(h * 1.000)); /* #323232 */
+  --dark-4:        oklch(from #000000 calc(l + 0.336) calc(c * 1.000) calc(h * 1.000)); /* #373737 */
+  /* Dimmed for both type */
   --dimmed: color-mix(in oklch, var(--light-4), var(--dark-4));
 }
 [palette_type="dark"] {
