@@ -33,7 +33,7 @@ palette-aequilibrium.css
 body {
   font-family: var(--text-font);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1em;
 }
 
 h1,h2,h3,h4,h5,h6 {
