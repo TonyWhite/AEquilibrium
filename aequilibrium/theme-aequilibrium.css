@@ -56,7 +56,7 @@ h6[underline]::after {
   left:0;
   height: 1px;
   width: 100%;
-  background-color: color-mix(in oklch, var(--dimmed), transparent);
+  background-color: color-mix(in oklch, var(--dimmed-bg), transparent);
 }
 
 h1 {font-size: 250%;}
@@ -70,7 +70,7 @@ h6 {font-size: 100%;}
 hr {
   border: none;
   height: 1px;
-  background-color: color-mix(in oklch, var(--dimmed), transparent);
+  background-color: color-mix(in oklch, var(--dimmed-bg), transparent);
 }
 
 /**************/
@@ -79,7 +79,7 @@ hr {
 input[type=text],
 input[type=password] {
   height: 1.7rem;
-  border: 1px solid var(--dimmed);
+  border: 1px solid var(--dimmed-bg);
   border-radius: 100vmax;
   text-align: center;
   padding: 0.1em;
