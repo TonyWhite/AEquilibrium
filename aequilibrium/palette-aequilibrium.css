@@ -31,10 +31,8 @@
   --dark-3:        oklch(from #000000 calc(l + 0.250) calc(c * 1.000) calc(h * 1.000)); /* #222222 */
   --dark-4:        oklch(from #000000 calc(l + 0.280) calc(c * 1.000) calc(h * 1.000)); /* #292929 */
   
-  /* Dimmed for accents */
-  
-  /* Dimmed for background */
-  --dimmed-bg: color-mix(in oklch, var(--light-4), var(--dark-4));
+  /* A gray to dim the other colors */
+  --gray: color-mix(in oklch, var(--white), var(--black));
 }
 [palette_type="dark"] {
   /* Accents */
@@ -48,17 +46,39 @@
   --magenta:      var(--light-magenta);
   --accent:       var(--white);
   /* Background */
-  --background:   var(--black);
-  --background-1: var(--dark-1);
+  --background:   var(--dark-4);
+  --background-1: var(--dark-3);
   --background-2: var(--dark-2);
-  --background-3: var(--dark-3);
-  --background-4: var(--dark-4);
+  --background-3: var(--dark-1);
+  --background-4: var(--black);
   /* Foreground */
-  --foreground:   var(--white);
-  --foreground-1: var(--light-1);
+  --foreground:   var(--light-4);
+  --foreground-1: var(--light-3);
   --foreground-2: var(--light-2);
-  --foreground-3: var(--light-3);
-  --foreground-4: var(--light-4);
+  --foreground-3: var(--light-1);
+  --foreground-4: var(--white);
+  /* Dimmed accents */
+  --dimmed-red:     color-mix(in oklch, var(--gray), var(--red));
+  --dimmed-orange:  color-mix(in oklch, var(--gray), var(--orange));
+  --dimmed-yellow:  color-mix(in oklch, var(--gray), var(--yellow));
+  --dimmed-green:   color-mix(in oklch, var(--gray), var(--green));
+  --dimmed-cyan:    color-mix(in oklch, var(--gray), var(--cyan));
+  --dimmed-blue:    color-mix(in oklch, var(--gray), var(--blue));
+  --dimmed-purple:  color-mix(in oklch, var(--gray), var(--purple));
+  --dimmed-magenta: color-mix(in oklch, var(--gray), var(--magenta));
+  --dimmed-accent:  color-mix(in oklch, var(--gray), var(--accent));
+  /* Dimmed background */
+  --dimmed-background:   color-mix(in oklch, var(--gray), var(--background));
+  --dimmed-background-1: color-mix(in oklch, var(--gray), var(--background-1));
+  --dimmed-background-2: color-mix(in oklch, var(--gray), var(--background-2));
+  --dimmed-background-3: color-mix(in oklch, var(--gray), var(--background-3));
+  --dimmed-background-4: color-mix(in oklch, var(--gray), var(--background-4));
+  /* Dimmed foreground */
+  --dimmed-foreground:   color-mix(in oklch, var(--gray), var(--foreground));
+  --dimmed-foreground-1: color-mix(in oklch, var(--gray), var(--foreground-1));
+  --dimmed-foreground-2: color-mix(in oklch, var(--gray), var(--foreground-2));
+  --dimmed-foreground-3: color-mix(in oklch, var(--gray), var(--foreground-3));
+  --dimmed-foreground-4: color-mix(in oklch, var(--gray), var(--foreground-4));
 }
 [palette_type="light"] {
   /* Accents */
@@ -72,17 +92,42 @@
   --magenta:      var(--dark-magenta);
   --accent:       var(--black);
   /* Background */
-  --background:   var(--white);
-  --background-1: var(--light-1);
+  --background:   var(--light-4);
+  --background-1: var(--light-3);
   --background-2: var(--light-2);
-  --background-3: var(--light-3);
-  --background-4: var(--light-4);
+  --background-3: var(--light-1);
+  --background-4: var(--white);
   /* Foreground */
-  --foreground:   var(--black);
-  --foreground-1: var(--dark-1);
+  --foreground:   var(--dark-4);
+  --foreground-1: var(--dark-3);
   --foreground-2: var(--dark-2);
-  --foreground-3: var(--dark-3);
-  --foreground-4: var(--dark-4);
+  --foreground-3: var(--dark-1);
+  --foreground-4: var(--black);
+  /* Dimmed accents */
+  --dimmed-red:     color-mix(in oklch, var(--gray), var(--red));
+  --dimmed-orange:  color-mix(in oklch, var(--gray), var(--orange));
+  --dimmed-yellow:  color-mix(in oklch, var(--gray), var(--yellow));
+  --dimmed-green:   color-mix(in oklch, var(--gray), var(--green));
+  --dimmed-cyan:    color-mix(in oklch, var(--gray), var(--cyan));
+  --dimmed-blue:    color-mix(in oklch, var(--gray), var(--blue));
+  --dimmed-purple:  color-mix(in oklch, var(--gray), var(--purple));
+  --dimmed-magenta: color-mix(in oklch, var(--gray), var(--magenta));
+  --dimmed-accent:  color-mix(in oklch, var(--gray), var(--accent));
+  /* Dimmed background */
+  --dimmed-background:   color-mix(in oklch, var(--gray), var(--background));
+  --dimmed-background-1: color-mix(in oklch, var(--gray), var(--background-1));
+  --dimmed-background-2: color-mix(in oklch, var(--gray), var(--background-2));
+  --dimmed-background-3: color-mix(in oklch, var(--gray), var(--background-3));
+  --dimmed-background-4: color-mix(in oklch, var(--gray), var(--background-4));
+  /* Dimmed foreground */
+  --dimmed-foreground:   color-mix(in oklch, var(--gray), var(--foreground));
+  --dimmed-foreground-1: color-mix(in oklch, var(--gray), var(--foreground-1));
+  --dimmed-foreground-2: color-mix(in oklch, var(--gray), var(--foreground-2));
+  --dimmed-foreground-3: color-mix(in oklch, var(--gray), var(--foreground-3));
+  --dimmed-foreground-4: color-mix(in oklch, var(--gray), var(--foreground-4));
+}
+[palette_type] {
+  color:var(--foreground);
 }
 
 [palette_accent="red"]     {--accent:var(--red);}
@@ -100,8 +145,17 @@
 }
 
 body {
-  color: var(--foreground);
   background-color: var(--background);
+}
+
+code {
+  background-color: var(--foreground);
+  color: var(--background);
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  border-radius: 0.5em;
 }
 
 /**************/
@@ -111,7 +165,7 @@ input[type=text],
 input[type=password] {
   background: var(--background);
   color: var(--foreground);
-  border-color: 1px solid var(--dimmed-bg);
+  border-color: 1px solid var(--gray);
   box-shadow: 0 1px 5px var(--background);
 }
 input[type=text]:focus,
