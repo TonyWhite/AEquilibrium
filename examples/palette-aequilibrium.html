@@ -15,6 +15,9 @@
         border-collapse: collapse;
         margin: auto;
       }
+      table thead td {
+        font-weight: bold;
+      }
       table td {
         padding: 0.5em;
         white-space: nowrap;
@@ -31,14 +34,14 @@
       table tr td:last-child {
         border-right: 1px solid var(--foreground);
       }
-      table tr:nth-child(1) td { color:var(--red); }
-      table tr:nth-child(2) td { color:var(--orange); }
-      table tr:nth-child(3) td { color:var(--yellow); }
-      table tr:nth-child(4) td { color:var(--green); }
-      table tr:nth-child(5) td { color:var(--cyan); }
-      table tr:nth-child(6) td { color:var(--blue); }
-      table tr:nth-child(7) td { color:var(--purple); }
-      table tr:nth-child(8) td { color:var(--magenta); }
+      table tr:nth-child(2) td { color:var(--red); }
+      table tr:nth-child(3) td { color:var(--orange); }
+      table tr:nth-child(4) td { color:var(--yellow); }
+      table tr:nth-child(5) td { color:var(--green); }
+      table tr:nth-child(6) td { color:var(--cyan); }
+      table tr:nth-child(7) td { color:var(--blue); }
+      table tr:nth-child(8) td { color:var(--purple); }
+      table tr:nth-child(9) td { color:var(--magenta); }
       table tr td:nth-child(1) { background-color:var(--background);}
       table tr td:nth-child(2) { background-color:var(--background-1);}
       table tr td:nth-child(3) { background-color:var(--background-2);}
@@ -53,25 +56,37 @@
     <hr>
     <h2>The light type</h2>
     <table palette_type="light">
-      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      <thead>
+        <tr><td>Default</td><td>Variant 1</td><td>Variant 2</td><td>Variant 3</td><td>Variant 4</td></tr>
+      </thead>
+      <tbody>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      </tbody>
     </table>
     <h2>The dark type</h2>
     <table palette_type="dark">
-      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-      <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      <thead>
+        <tr><td>Default</td><td>Variant 1</td><td>Variant 2</td><td>Variant 3</td><td>Variant 4</td></tr>
+      </thead>
+      <tbody>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+      </tbody>
     </table>
     <h2>Designed for</h2>
     <p>
@@ -79,12 +94,22 @@
       Favors eye relaxation while reading.<br>
       Ocular fatigue decreases when you look away from the screen. 
     </p>
+    <h2>Variants</h2>
+    <p>Both Light and Dark has 4 variants.<br>
+      · The "Default" is designed to limit the eye fatigue when reading the screen.<br>
+      · The "Variant 1" has more contrast than "Default".<br>
+      · The "Variant 2" has more contrast than "Variant 1".<br>
+      · The "Variant 3" has more contrast than "Variant 2".<br>
+      · The "Variant 4" has more contrast than "Variant 3".<br>
+      · The "Variant 4" of the Dark palette is useful if you like your OLED screen to turn off the black pixels.
+    </p>
     <h2>Light features</h2>
-      The lightest background is slightly gray, so the screen LEDs will not emit the light with all the available power. You have the perception of white, while your eyes will relax.<br>
+      A palette for the light there is.<br>
+      The "Variant 4" has a slightly gray background, so the screen LEDs will not emit the light with all the available power. You have the perception of white, while your eyes will relax.<br>
     <h2>Dark features</h2>
     <p>
       Recommended for long reading on screens. Unlike paper, the screen emits light. A black background with a slightly gray text increase the eye relaxation.<br>
-      The darkest background is black, so the energy manager can turn off the black pixels.<br>
+      The "Variant 4" is useful if you like your OLED screen to turn off the black pixels.
     </p>
   </body>
 </html>
