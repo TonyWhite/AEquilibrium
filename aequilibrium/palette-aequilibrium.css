@@ -21,8 +21,8 @@
   /* Background for Light palette */
   --white:         oklch(from #FFFFFF calc(l * 0.973) calc(c * 1.000) calc(h * 1.000)); /* #F6F6F6 */
   --light-1:       oklch(from #FFFFFF calc(l * 0.958) calc(c * 1.000) calc(h * 1.000)); /* #F1F1F1 */
-  --light-2:       oklch(from #FFFFFF calc(l * 0.940) calc(c * 1.000) calc(h * 1.000)); /* #EBEBEB */
-  --light-3:       oklch(from #FFFFFF calc(l * 0.931) calc(c * 1.000) calc(h * 1.000)); /* #E8E8E8 */
+  --light-2:       oklch(from #FFFFFF calc(l * 0.943) calc(c * 1.000) calc(h * 1.000)); /* #ECECEC */
+  --light-3:       oklch(from #FFFFFF calc(l * 0.927) calc(c * 1.000) calc(h * 1.000)); /* #E7E7E7 */
   --light-4:       oklch(from #FFFFFF calc(l * 0.912) calc(c * 1.000) calc(h * 1.000)); /* #E2E2E2 */
   /* Background for Dark palette */
   --black:         oklch(from #000000 calc(l + 0.000) calc(c * 1.000) calc(h * 1.000)); /* #000000 */
