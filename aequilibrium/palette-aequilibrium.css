@@ -1,133 +1,60 @@
 [palette="aequilibrium"] {
-  /* Accents for Light palette */
-  --dark-red:      oklch(53.00% 0.257  29.23); /* #DA0000 */
-  --dark-orange:   oklch(69.00% 0.170  60.00); /* #E57C00 */
-  --dark-yellow:   oklch(68.60% 0.141  82.27); /* #C59001 */
-  --dark-green:    oklch(65.00% 0.295 142.50); /* #00B500 */
-  --dark-cyan:     oklch(65.90% 0.112 200.10); /* #00A6AD */
-  --dark-blue:     oklch(65.98% 0.182 257.41); /* #4090FF */
-  --dark-purple:   oklch(67.75% 0.218 306.33); /* #BA69FF */
-  --dark-magenta:  oklch(73.00% 0.249 328.30); /* #F65DF4 */
-  /* Accents for Dark palette */
-  --light-red:     oklch(62.80% 0.230  29.23); /* #F43225 */
-  --light-orange:  oklch(67.00% 0.185  52.98); /* #E96C00 */
-  --light-yellow:  oklch(85.00% 0.211 109.76); /* #C8C700 */
-  --light-green:   oklch(61.00% 0.294 142.50); /* #00A800 */
-  --light-cyan:    oklch(70.00% 0.154 194.76); /* #00BABC */
-  --light-blue:    oklch(73.50% 0.313 264.05); /* #3C8FFF */
-  --light-purple:  oklch(72.50% 0.293 293.95); /* #B86AFF */
-  --light-magenta: oklch(68.50% 0.240 328.37); /* #E452E2 */
+  --red:     light-dark(oklch(58.25% 0.2247  29.96), oklch(66.25% 0.2247  29.96));
+  --orange:  light-dark(oklch(67.17% 0.2000  61.11), oklch(76.17% 0.1701  61.11));
+  --yellow:  light-dark(oklch(60.21% 0.1322  81.57), oklch(82.40% 0.1702  98.07));
+  --green:   light-dark(oklch(55.61% 0.2232 142.50), oklch(80.13% 0.2053 127.23));
+  --cyan:    light-dark(oklch(65.08% 0.1631 239.28), oklch(82.50% 0.1072 212.91));
+  --blue:    light-dark(oklch(52.06% 0.1998 264.05), oklch(65.81% 0.1299 234.79));
+  --purple:  light-dark(oklch(54.41% 0.2061 295.76), oklch(64.41% 0.2061 295.76));
+  --magenta: light-dark(oklch(54.30% 0.2295 328.74), oklch(64.30% 0.2295 328.74));
   
-  /* Background for Light palette */
-  --white:         oklch(from #FFFFFF calc(l * 0.973) calc(c * 1.000) calc(h * 1.000)); /* #F6F6F6 */
-  --light-1:       oklch(from #FFFFFF calc(l * 0.958) calc(c * 1.000) calc(h * 1.000)); /* #F1F1F1 */
-  --light-2:       oklch(from #FFFFFF calc(l * 0.943) calc(c * 1.000) calc(h * 1.000)); /* #ECECEC */
-  --light-3:       oklch(from #FFFFFF calc(l * 0.927) calc(c * 1.000) calc(h * 1.000)); /* #E7E7E7 */
-  --light-4:       oklch(from #FFFFFF calc(l * 0.912) calc(c * 1.000) calc(h * 1.000)); /* #E2E2E2 */
-  /* Background for Dark palette */
-  --black:         oklch(from #000000 calc(l + 0.000) calc(c * 1.000) calc(h * 1.000)); /* #000000 */
-  --dark-1:        oklch(from #000000 calc(l + 0.180) calc(c * 1.000) calc(h * 1.000)); /* #121212 */
-  --dark-2:        oklch(from #000000 calc(l + 0.220) calc(c * 1.000) calc(h * 1.000)); /* #1B1B1B */
-  --dark-3:        oklch(from #000000 calc(l + 0.250) calc(c * 1.000) calc(h * 1.000)); /* #222222 */
-  --dark-4:        oklch(from #000000 calc(l + 0.280) calc(c * 1.000) calc(h * 1.000)); /* #292929 */
+  --black:  #000000;
+  --dark:   oklch(18.00% 0 0); /* DeltaE with black  is 3.2030 */
+  --dark-1: oklch(22.86% 0 0); /* DeltaE with dark   is 3.0727 */
+  --dark-2: oklch(26.66% 0 0); /* DeltaE with dark-1 is 3.2170 */
+  --dark-3: oklch(31.00% 0 0); /* DeltaE with dark-2 is 3.1737 */
+  --dark-4: oklch(34.65% 0 0); /* DeltaE with dark-3 is 3.0060 */
   
-  /* A gray to dim the other colors */
-  --gray: color-mix(in oklch, var(--white), var(--black));
+  --white:   #FFFFFF;
+  --light:   oklch(95.50% 0 0); /* DeltaE with white   is 3.0470 */
+  --light-1: oklch(91.20% 0 0); /* DeltaE with light   is 3.0109 */
+  --light-2: oklch(87.00% 0 0); /* DeltaE with light-1 is 3.1922 */
+  --light-3: oklch(83.00% 0 0); /* DeltaE with light-2 is 3.1470 */
+  --light-4: oklch(79.20% 0 0); /* DeltaE with light-3 is 3.0813 */
+  
+  /* Dimmed colors */
+  --gray:           oklch(56.93% 0.000   0.00); /* DeltaE from [white:36.49 & black:36.55] -> #777777 */
+  --dimmed-red:     oklch(56.93% 0.096   0.00); /* from #ff0000 to Luminosity 56.93% */
+  --dimmed-orange:  oklch(56.93% 0.096  49.38); /* from #ff7700 to Luminosity 56.93% */
+  --dimmed-yellow:  oklch(56.93% 0.096 109.77); /* from #ffff00 to Luminosity 56.93% */
+  --dimmed-green:   oklch(56.93% 0.096 142.50); /* from #00ff00 to Luminosity 56.93% */
+  --dimmed-cyan:    oklch(56.93% 0.096 194.77); /* from #00ffff to Luminosity 56.93% */
+  --dimmed-blue:    oklch(56.93% 0.096 264.05); /* from #0000ff to Luminosity 56.93% */
+  --dimmed-purple:  oklch(56.93% 0.096 290.98); /* from #7700ff to Luminosity 56.93% */
+  --dimmed-magenta: oklch(56.93% 0.096 328.36); /* from #ff00ff to Luminosity 56.93% */
+  --dimmed: var(--gray);
+  
+  --background-HC: light-dark(var(--white),   var(--black));  /* High Contrast */
+  --background:    light-dark(var(--light),   var(--dark));   /* Normal */
+  --background-1:  light-dark(var(--light-1), var(--dark-1));
+  --background-2:  light-dark(var(--light-2), var(--dark-2));
+  --background-3:  light-dark(var(--light-3), var(--dark-3));
+  --background-4:  light-dark(var(--light-4), var(--dark-4));
+  
+  --foreground-HC: light-dark(var(--black),  var(--white));   /* High Contrast */
+  --foreground:    light-dark(var(--dark),   var(--light));   /* Normal */
+  --foreground-1:  light-dark(var(--dark-1), var(--light-1));
+  --foreground-2:  light-dark(var(--dark-2), var(--light-2));
+  --foreground-3:  light-dark(var(--dark-3), var(--light-3));
+  --foreground-4:  light-dark(var(--dark-4), var(--light-4));
 }
-[palette_type="dark"] {
-  /* Accents */
-  --red:          var(--light-red);
-  --orange:       var(--light-orange);
-  --yellow:       var(--light-yellow);
-  --green:        var(--light-green);
-  --cyan:         var(--light-cyan);
-  --blue:         var(--light-blue);
-  --purple:       var(--light-purple);
-  --magenta:      var(--light-magenta);
-  --accent:       var(--white);
-  /* Background */
-  --background:   var(--dark-4);
-  --background-1: var(--dark-3);
-  --background-2: var(--dark-2);
-  --background-3: var(--dark-1);
-  --background-4: var(--black);
-  /* Foreground */
-  --foreground:   var(--light-4);
-  --foreground-1: var(--light-3);
-  --foreground-2: var(--light-2);
-  --foreground-3: var(--light-1);
-  --foreground-4: var(--white);
-  /* Dimmed accents */
-  --dimmed-red:     color-mix(in oklch, var(--gray), var(--red));
-  --dimmed-orange:  color-mix(in oklch, var(--gray), var(--orange));
-  --dimmed-yellow:  color-mix(in oklch, var(--gray), var(--yellow));
-  --dimmed-green:   color-mix(in oklch, var(--gray), var(--green));
-  --dimmed-cyan:    color-mix(in oklch, var(--gray), var(--cyan));
-  --dimmed-blue:    color-mix(in oklch, var(--gray), var(--blue));
-  --dimmed-purple:  color-mix(in oklch, var(--gray), var(--purple));
-  --dimmed-magenta: color-mix(in oklch, var(--gray), var(--magenta));
-  --dimmed-accent:  color-mix(in oklch, var(--gray), var(--accent));
-  /* Dimmed background */
-  --dimmed-background:   color-mix(in oklch, var(--gray), var(--background));
-  --dimmed-background-1: color-mix(in oklch, var(--gray), var(--background-1));
-  --dimmed-background-2: color-mix(in oklch, var(--gray), var(--background-2));
-  --dimmed-background-3: color-mix(in oklch, var(--gray), var(--background-3));
-  --dimmed-background-4: color-mix(in oklch, var(--gray), var(--background-4));
-  /* Dimmed foreground */
-  --dimmed-foreground:   color-mix(in oklch, var(--gray), var(--foreground));
-  --dimmed-foreground-1: color-mix(in oklch, var(--gray), var(--foreground-1));
-  --dimmed-foreground-2: color-mix(in oklch, var(--gray), var(--foreground-2));
-  --dimmed-foreground-3: color-mix(in oklch, var(--gray), var(--foreground-3));
-  --dimmed-foreground-4: color-mix(in oklch, var(--gray), var(--foreground-4));
-}
+
 [palette_type="light"] {
-  /* Accents */
-  --red:          var(--dark-red);
-  --orange:       var(--dark-orange);
-  --yellow:       var(--dark-yellow);
-  --green:        var(--dark-green);
-  --cyan:         var(--dark-cyan);
-  --blue:         var(--dark-blue);
-  --purple:       var(--dark-purple);
-  --magenta:      var(--dark-magenta);
-  --accent:       var(--black);
-  /* Background */
-  --background:   var(--light-4);
-  --background-1: var(--light-3);
-  --background-2: var(--light-2);
-  --background-3: var(--light-1);
-  --background-4: var(--white);
-  /* Foreground */
-  --foreground:   var(--dark-4);
-  --foreground-1: var(--dark-3);
-  --foreground-2: var(--dark-2);
-  --foreground-3: var(--dark-1);
-  --foreground-4: var(--black);
-  /* Dimmed accents */
-  --dimmed-red:     color-mix(in oklch, var(--gray), var(--red));
-  --dimmed-orange:  color-mix(in oklch, var(--gray), var(--orange));
-  --dimmed-yellow:  color-mix(in oklch, var(--gray), var(--yellow));
-  --dimmed-green:   color-mix(in oklch, var(--gray), var(--green));
-  --dimmed-cyan:    color-mix(in oklch, var(--gray), var(--cyan));
-  --dimmed-blue:    color-mix(in oklch, var(--gray), var(--blue));
-  --dimmed-purple:  color-mix(in oklch, var(--gray), var(--purple));
-  --dimmed-magenta: color-mix(in oklch, var(--gray), var(--magenta));
-  --dimmed-accent:  color-mix(in oklch, var(--gray), var(--accent));
-  /* Dimmed background */
-  --dimmed-background:   color-mix(in oklch, var(--gray), var(--background));
-  --dimmed-background-1: color-mix(in oklch, var(--gray), var(--background-1));
-  --dimmed-background-2: color-mix(in oklch, var(--gray), var(--background-2));
-  --dimmed-background-3: color-mix(in oklch, var(--gray), var(--background-3));
-  --dimmed-background-4: color-mix(in oklch, var(--gray), var(--background-4));
-  /* Dimmed foreground */
-  --dimmed-foreground:   color-mix(in oklch, var(--gray), var(--foreground));
-  --dimmed-foreground-1: color-mix(in oklch, var(--gray), var(--foreground-1));
-  --dimmed-foreground-2: color-mix(in oklch, var(--gray), var(--foreground-2));
-  --dimmed-foreground-3: color-mix(in oklch, var(--gray), var(--foreground-3));
-  --dimmed-foreground-4: color-mix(in oklch, var(--gray), var(--foreground-4));
+  color-scheme: light;
 }
-[palette_type] {
-  color:var(--foreground);
+
+[palette_type="dark"] {
+  color-scheme: dark;
 }
 
 [palette_accent="red"]     {--accent:var(--red);}
@@ -145,7 +72,9 @@
 }
 
 body {
+  color-scheme: light dark;
   background-color: var(--background);
+  color: var(--foreground);
 }
 
 h1,h2,h3,h4,h5,h6 {
