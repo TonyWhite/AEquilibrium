@@ -70,20 +70,20 @@
 [palette_accent="purple"]  {--accent:var(--purple);}
 [palette_accent="magenta"] {--accent:var(--magenta);}
 
-::selection {
+[palette="aequilibrium"] ::selection {
   background: var(--accent);
   color: var(--background);
 }
 
-body {
+body[palette="aequilibrium"]:not([palette_type]) {
   color-scheme: light dark;
 }
 
-h1,h2,h3,h4,h5,h6 {
+[palette="aequilibrium"] h1,h2,h3,h4,h5,h6 {
   color: var(--accent);
 }
 
-code {
+[palette="aequilibrium"] code {
   background-color: var(--foreground);
   color: var(--background);
   padding-left: 0.5em;
@@ -96,17 +96,17 @@ code {
 /**************/
 /* INPUT TEXT */
 /**************/
-input[type=text],
-input[type=password] {
+[palette="aequilibrium"] input[type=text],
+[palette="aequilibrium"] input[type=password] {
   background: var(--background);
   color: var(--foreground);
   border-color: 1px solid var(--gray);
   box-shadow: 0 1px 5px var(--background);
 }
-input[type=text]:focus,
-input[type=password]:focus {
+[palette="aequilibrium"] input[type=text]:focus,
+[palette="aequilibrium"] input[type=password]:focus {
   outline-color: var(--accent);
 }
-input[type=text] {
+[palette="aequilibrium"] input[type=text] {
   font-family: var(--font-normal);
 }
