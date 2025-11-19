@@ -1,37 +1,37 @@
-[palette="aequilibrium"] {
-  --red:     light-dark(oklch(58.25% 0.2247  29.96), oklch(66.25% 0.2247  29.96));
-  --orange:  light-dark(oklch(67.17% 0.2000  61.11), oklch(76.17% 0.1701  61.11));
-  --yellow:  light-dark(oklch(60.21% 0.1322  81.57), oklch(82.40% 0.1702  98.07));
-  --green:   light-dark(oklch(55.61% 0.2232 142.50), oklch(80.13% 0.2053 127.23));
-  --cyan:    light-dark(oklch(65.08% 0.1631 239.28), oklch(82.50% 0.1072 212.91));
-  --blue:    light-dark(oklch(52.06% 0.1998 264.05), oklch(65.81% 0.1299 234.79));
-  --purple:  light-dark(oklch(54.41% 0.2061 295.76), oklch(64.41% 0.2061 295.76));
-  --magenta: light-dark(oklch(54.30% 0.2295 328.74), oklch(64.30% 0.2295 328.74));
+[palette="aequilibrium"] {                                                             /* LIGHT   - DARK   */
+  --red:     light-dark(oklch(58.25% 0.2247  29.96), oklch(66.25% 0.2247  29.96)); /* #e12010 - #ff4532 */
+  --orange:  light-dark(oklch(67.17% 0.2000  61.11), oklch(76.17% 0.1701  61.11)); /* #e17600 - #fd941c */
+  --yellow:  light-dark(oklch(60.21% 0.1322  81.57), oklch(82.40% 0.1702  98.07)); /* #a87700 - #e3c501 */
+  --green:   light-dark(oklch(55.61% 0.2232 142.50), oklch(80.13% 0.2053 127.23)); /* #008f00 - #9ad50c */
+  --cyan:    light-dark(oklch(65.08% 0.1631 239.28), oklch(82.50% 0.1072 212.91)); /* #0099e7 - #67d8ef */
+  --blue:    light-dark(oklch(52.06% 0.1998 264.05), oklch(65.81% 0.1299 234.79)); /* #2a5cda - #239dd5 */
+  --purple:  light-dark(oklch(54.41% 0.2061 295.76), oklch(64.41% 0.2061 295.76)); /* #7e49d7 - #9b6afa */
+  --magenta: light-dark(oklch(54.30% 0.2295 328.74), oklch(64.30% 0.2295 328.74)); /* #b120af - #d348d0 */
   
   --black:  #000000;
-  --dark:   oklch(18.00% 0 0); /* DeltaE with black  is 3.2030 */
-  --dark-1: oklch(22.86% 0 0); /* DeltaE with dark   is 3.0727 */
-  --dark-2: oklch(26.66% 0 0); /* DeltaE with dark-1 is 3.2170 */
-  --dark-3: oklch(31.00% 0 0); /* DeltaE with dark-2 is 3.1737 */
-  --dark-4: oklch(34.65% 0 0); /* DeltaE with dark-3 is 3.0060 */
+  --dark:   oklch(18.00% 0 0); /* #121212 -> DeltaE with black  is 3.2030 */
+  --dark-1: oklch(22.86% 0 0); /* #1c1c1c -> DeltaE with dark   is 3.0727 */
+  --dark-2: oklch(26.66% 0 0); /* #262626 -> DeltaE with dark-1 is 3.2170 */
+  --dark-3: oklch(31.00% 0 0); /* #303030 -> DeltaE with dark-2 is 3.1737 */
+  --dark-4: oklch(34.65% 0 0); /* #393939 -> DeltaE with dark-3 is 3.0060 */
   
-  --white:   #FFFFFF;
-  --light:   oklch(95.50% 0 0); /* DeltaE with white   is 3.0470 */
-  --light-1: oklch(91.20% 0 0); /* DeltaE with light   is 3.0109 */
-  --light-2: oklch(87.00% 0 0); /* DeltaE with light-1 is 3.1922 */
-  --light-3: oklch(83.00% 0 0); /* DeltaE with light-2 is 3.1470 */
-  --light-4: oklch(79.20% 0 0); /* DeltaE with light-3 is 3.0813 */
+  --white:   #ffffff;
+  --light:   oklch(95.50% 0 0); /* #f0f0f0 -> DeltaE with white   is 3.0470 */
+  --light-1: oklch(91.20% 0 0); /* #e2e2e2 -> DeltaE with light   is 3.0109 */
+  --light-2: oklch(87.00% 0 0); /* #d4d4d4 -> DeltaE with light-1 is 3.1922 */
+  --light-3: oklch(83.00% 0 0); /* #c7c7c7 -> DeltaE with light-2 is 3.1470 */
+  --light-4: oklch(79.20% 0 0); /* #bbbbbb -> DeltaE with light-3 is 3.0813 */
   
   /* Dimmed colors */
-  --gray:           oklch(56.93% 0.000   0.00); /* DeltaE from [white:36.49 & black:36.55] -> #777777 */
-  --dimmed-red:     oklch(56.93% 0.096   0.00); /* from #ff0000 to Luminosity 56.93% */
-  --dimmed-orange:  oklch(56.93% 0.096  49.38); /* from #ff7700 to Luminosity 56.93% */
-  --dimmed-yellow:  oklch(56.93% 0.096 109.77); /* from #ffff00 to Luminosity 56.93% */
-  --dimmed-green:   oklch(56.93% 0.096 142.50); /* from #00ff00 to Luminosity 56.93% */
-  --dimmed-cyan:    oklch(56.93% 0.096 194.77); /* from #00ffff to Luminosity 56.93% */
-  --dimmed-blue:    oklch(56.93% 0.096 264.05); /* from #0000ff to Luminosity 56.93% */
-  --dimmed-purple:  oklch(56.93% 0.096 290.98); /* from #7700ff to Luminosity 56.93% */
-  --dimmed-magenta: oklch(56.93% 0.096 328.36); /* from #ff00ff to Luminosity 56.93% */
+  --gray:           oklch(56.93% 0.000   0.00); /* #777777 -> DeltaE from [white:36.49 & black:36.55] */
+  --dimmed-red:     oklch(56.93% 0.096   0.00); /* #a55e75 -> from #ff0000 to Luminosity 56.93% */
+  --dimmed-orange:  oklch(56.93% 0.096  49.38); /* #a46541 -> from #ff7700 to Luminosity 56.93% */
+  --dimmed-yellow:  oklch(56.93% 0.096 109.77); /* #7b7c32 -> from #ffff00 to Luminosity 56.93% */
+  --dimmed-green:   oklch(56.93% 0.096 142.50); /* #548650 -> from #00ff00 to Luminosity 56.93% */
+  --dimmed-cyan:    oklch(56.93% 0.096 194.77); /* #078888 -> from #00ffff to Luminosity 56.93% */
+  --dimmed-blue:    oklch(56.93% 0.096 264.05); /* #5a76b0 -> from #0000ff to Luminosity 56.93% */
+  --dimmed-purple:  oklch(56.93% 0.096 290.98); /* #776dab -> from #7700ff to Luminosity 56.93% */
+  --dimmed-magenta: oklch(56.93% 0.096 328.36); /* #966294 -> from #ff00ff to Luminosity 56.93% */
   --dimmed: var(--gray);
   
   --background-HC: light-dark(var(--white),   var(--black));  /* High Contrast */
