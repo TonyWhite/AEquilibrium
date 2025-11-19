@@ -53,6 +53,10 @@
   color: var(--foreground);
 }
 
+[palette_type="auto"] {
+  color-scheme: light dark;
+}
+
 [palette_type="light"] {
   color-scheme: light;
 }
