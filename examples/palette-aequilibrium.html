@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../aequilibrium/palette-aequilibrium.css">
     <link rel="stylesheet" href="../aequilibrium/theme-aequilibrium.css">
+    <script src="https://unpkg.com/chroma-js/dist/chroma.min.cjs"></script>
     <style>
       body {
         text-align: center;
@@ -42,11 +43,12 @@
       table tr:nth-child(7) td { color:var(--blue); }
       table tr:nth-child(8) td { color:var(--purple); }
       table tr:nth-child(9) td { color:var(--magenta); }
-      table tr td:nth-child(1) { background-color:var(--background);}
-      table tr td:nth-child(2) { background-color:var(--background-1);}
-      table tr td:nth-child(3) { background-color:var(--background-2);}
-      table tr td:nth-child(4) { background-color:var(--background-3);}
-      table tr td:nth-child(5) { background-color:var(--background-4);}
+      table tr td:nth-child(1) { background-color:var(--background-HC);}
+      table tr td:nth-child(2) { background-color:var(--background);}
+      table tr td:nth-child(3) { background-color:var(--background-1);}
+      table tr td:nth-child(4) { background-color:var(--background-2);}
+      table tr td:nth-child(5) { background-color:var(--background-3);}
+      table tr td:nth-child(6) { background-color:var(--background-4);}
     </style>
   </head>
   <body palette="aequilibrium" palette_type="light">
@@ -54,62 +56,115 @@
     <img alt="Static Badge" src="https://img.shields.io/badge/Version-RC-blue">
     <img alt="Static Badge" src="https://img.shields.io/badge/Status-Beta%20testing-orange">
     <hr>
+    <h2 underline>The Problem</h2>
+    <p>
+      Text contrast on screens is an important aspect of eye health. However, there is no one-size-fits-all rule:
+      <li>
+        <ul>WCAG AAA guidelines are optimized for the visually impaired, but not for the non-visually impaired.</ul>
+        <ul>Excessive contrast of screens and excessive use of screens increases the afterimage effect, headaches and visual fatigue. It risks creating new visually impaired people.</ul>
+        <ul>La visione umana non è binaria: non esiste una soluzione universale</ul>
+      </li>
+    </p>
+    <h2 underline>The Solution</h2>
+    <p>
+      The palette has variants:
+      <li>
+        <ul><strong>1 default variant</strong>: alto contrasto, afterimage ridotto, colori più vibranti.</ul>
+        <ul><strong>4 varianti standard</strong> contrasto ridotto, conforme a WCAG AA, afterimage ridotto.</ul>
+        <ul><strong>1 HC (High Contrast) variant</strong>: altissimo contrasto, conforme a WCAG AAA, per ipovedenti.</ul>
+        <ul><strong>Chromatic equilibrium</strong>: tutti i colori con percezione visiva uniforme</ul>
+      </li>
+    </p>
+    <h2>Features</h2>
+    <p>
+      <li>
+        <ul>Colori: bianco, nero, rosso, arancio, giallo, verde, ciano, blu, viola, magenta</ul>
+        <ul>Temi: chiaro e scuro per ogni colore</ul>
+        <ul>Conformità: AA per varianti standard, AAA per HC</ul>
+      </li>
+    </p>
+    <h2>Why?</h2>
+    <p>
+      Spiega i principi sottostanti:
+      <li>
+        <ul>L'affaticamento visivo non è solo "contrasto insufficiente"</ul>
+        <ul>Normovedenti hanno esigenze diverse da ipovedenti</ul>
+        <ul>Accessibilità reale = offrire **scelte**, non imporre uniformità</ul>
+        <ul>La salute oculare a lungo termine conta</ul>
+      </li>
+    </p>
     <h2>The light type</h2>
     <table palette_type="light">
       <thead>
-        <tr><td>Default</td><td>Variant 1</td><td>Variant 2</td><td>Variant 3</td><td>Variant 4</td></tr>
+        <tr><td>High Contrast</td><td>Default</td><td>Variant 1</td><td>Variant 2</td><td>Variant 3</td><td>Variant 4</td></tr>
       </thead>
       <tbody>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
       </tbody>
     </table>
     <h2>The dark type</h2>
     <table palette_type="dark">
       <thead>
-        <tr><td>Default</td><td>Variant 1</td><td>Variant 2</td><td>Variant 3</td><td>Variant 4</td></tr>
+        <tr><td>High Contrast</td><td>Default</td><td>Variant 1</td><td>Variant 2</td><td>Variant 3</td><td>Variant 4</td></tr>
       </thead>
       <tbody>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
-        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
+        <tr><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td><td>█ Example</td></tr>
       </tbody>
     </table>
-    <h2>Designed for</h2>
+    <h2 underline>Designed for</h2>
     <p>
       Drastically decrease ocular fatigue.<br>
+      Limit the afterimage effect.<br>
       Favors eye relaxation while reading.<br>
       Ocular fatigue decreases when you look away from the screen. 
     </p>
-    <h2>Variants</h2>
+    <h2 underline>Variants</h2>
     <p>Both Light and Dark has 4 variants.<br>
-      · The "Default" is designed to limit the eye fatigue when reading the screen.<br>
+      · The "High Contrast" has the maximum contrast.<br>
+      · The "Default" is the AEQUILIBRIUM between the perceived contrast and the limitation of the afterimage effect.<br>
       · The "Variant 1" has less contrast than "Default".<br>
       · The "Variant 2" has less contrast than "Variant 1".<br>
       · The "Variant 3" has less contrast than "Variant 2".<br>
       · The "Variant 4" has less contrast than "Variant 3".<br>
-      · The "Variant 4" of the Dark palette is useful if you like your OLED screen to turn off the black pixels.
+      · The "High Contrast" of the Dark palette is useful if you like your OLED screen to turn off the black pixels.
     </p>
-    <h2>Light features</h2>
+    <h2 underline>Light features</h2>
       A palette for the light there is.<br>
       The "Variant 4" has a slightly gray background, so the screen LEDs will not emit the light with all the available power. You have the perception of white, while your eyes will relax.<br>
-    <h2>Dark features</h2>
+    <h2 underline>Dark features</h2>
     <p>
       Recommended for long reading on screens. Unlike paper, the screen emits light. A black background with a slightly gray text increase the eye relaxation.<br>
       The "Variant 4" is useful if you like your OLED screen to turn off the black pixels.
     </p>
   </body>
+  <script>
+    let tr_list = document.querySelectorAll("table[palette_type] > tbody > tr");
+    tr_list.forEach((tr) => {
+      let td_list = tr.querySelectorAll("td");
+      td_list.forEach((td) => {
+        let background = chroma(getComputedStyle(td).getPropertyValue("background")).hex();
+        let foreground = chroma(getComputedStyle(td).getPropertyValue("color")).hex();
+        let contrast = chroma.contrast(background, foreground).toFixed(2);
+        let edited = td.innerHTML + "<br>" + contrast;
+        td.innerHTML = edited;
+        console.log("(" + foreground + ", " + background + ") = " + contrast);
+      });
+    });
+  </script>
 </html>
