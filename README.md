@@ -12,6 +12,11 @@
 ![Static Badge](https://img.shields.io/badge/Dependencies-None-green)
 ![Static Badge](https://img.shields.io/badge/Intelligence-Real-green)
 
+## Online preview
+
+See the preview of [Aequilibrium](https://tonywhite.github.io/AEquilibrium/)!
+
+
 ## Fast-start
 
 If you want to import the whole Æquilibrium, you need this:
