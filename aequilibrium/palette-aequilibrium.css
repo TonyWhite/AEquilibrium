@@ -55,14 +55,17 @@
 
 [palette_type="auto"] {
   color-scheme: light dark;
+  color: var(--foreground);
 }
 
 [palette_type="light"] {
   color-scheme: light;
+  color: var(--foreground);
 }
 
 [palette_type="dark"] {
   color-scheme: dark;
+  color: var(--foreground);
 }
 
 [palette_accent="red"]     {--accent:var(--red);}
