@@ -1,5 +1,20 @@
 # Æquilibrium
 
+> ## ⚠️ The project will be resized
+> 
+> The philosophy of the project is compatible with the [DaisyUI](https://github.com/saadeghi/daisyui) project, so I no longer need to "reinvent the wheel".
+> 
+> From this moment on, this project will be dedicated to the palette.
+
+> ## ⚠️ The license will be changed
+> 
+> The new license:
+> - Allow personal and commercial use
+> - Allow source modification
+> - Allow redistribution
+> - Allow closed source project to use my project
+> - Protect me and my project from patent trolls
+
 [![Static Badge](https://img.shields.io/badge/License-CC%20BY--SA%204.0-white)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ![Static Badge](https://img.shields.io/badge/Version-pre--alpha-red)
