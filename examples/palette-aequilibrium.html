@@ -4,12 +4,25 @@
     <meta charset="UTF-8" />
     <title>Palette Æquilibrium</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../aequilibrium/palette-aequilibrium.css">
-    <link rel="stylesheet" href="../aequilibrium/theme-aequilibrium.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=julius-sans-one:400|noto-emoji:300,400,500,600,700" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=andika:400,400i,700,700i" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=fira-code:300,400,500,600,700" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=noto-color-emoji:400" rel="stylesheet" />
+    <!-- Chroma.js -->
     <script src="https://unpkg.com/chroma-js/dist/chroma.min.cjs"></script>
+    <!-- This project -->
+    <link rel="stylesheet" href="../aequilibrium/palette-aequilibrium.css">
     <style>
       body {
-        text-align: center;
+        font-family: "Andika", sans-serif, "Noto Color Emoji";
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Julius Sans One", serif, "Noto Color Emoji";
+      }
+      code {
+        font-family: "Fira Code", monospace, "Noto Color Emoji";
       }
       table {
         border: none;
@@ -49,20 +62,21 @@
       table tr td:nth-child(4) { background-color:var(--background-2);}
       table tr td:nth-child(5) { background-color:var(--background-3);}
       table tr td:nth-child(6) { background-color:var(--background-4);}
+
+      
     </style>
   </head>
   <body palette="aequilibrium" palette_type="light">
     <h1>Palette Æquilibrium</h1>
-    <img alt="Static Badge" src="https://img.shields.io/badge/Version-RC-blue">
-    <img alt="Static Badge" src="https://img.shields.io/badge/Status-Beta%20testing-orange">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Version-Pre--alpha-red">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Status-Work%20in%20progress-gold">
     <hr>
     <h2 underline>The Problem</h2>
     <p>
       Text contrast on screens is an important aspect of eye health. However, there is no one-size-fits-all rule:
       <li>
         <ul>WCAG AAA guidelines are optimized for the visually impaired, but not for the non-visually impaired.</ul>
-        <ul>Excessive contrast of screens and excessive use of screens increases the afterimage effect, headaches and visual fatigue. It risks creating new visually impaired people.</ul>
-        <ul>La visione umana non è binaria: non esiste una soluzione universale</ul>
+        <ul>Excessive contrast of screens and excessive use of screens increases the visual fatigue. It risks creating new visually impaired people.</ul>
       </li>
     </p>
     <h2 underline>The Solution</h2>

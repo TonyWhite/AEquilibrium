@@ -4,61 +4,291 @@
     <meta charset="UTF-8" />
     <title>Æquilibrium</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=julius-sans-one:400|noto-emoji:300,400,500,600,700" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=andika:400,400i,700,700i" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=fira-code:300,400,500,600,700" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=noto-color-emoji:400" rel="stylesheet" />
+    <!-- daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Chroma.js -->
+    <script src="https://unpkg.com/chroma-js/dist/chroma.min.cjs"></script>
+    <!-- This project -->
     <link rel="stylesheet" href="./aequilibrium/palette-aequilibrium.css">
-    <link rel="stylesheet" href="./aequilibrium/theme-aequilibrium.css">
     <style>
+      /* FONT */
       body {
-        padding: 0;
-        margin: 0.5rem;
-        font-size: 100%;
+        font-family: "Andika", sans-serif, "Noto Color Emoji";
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Julius Sans One", serif, "Noto Color Emoji";
+        font-weight: bold;
+      }
+      code {
+        font-family: "Fira Code", monospace, "Noto Color Emoji";
+      }
+      h1 {font-size: 2.5rem;}
+      h2 {font-size: 1.8rem;}
+      h3 {font-size: 1.6rem;}
+      h4 {font-size: 1.4rem;}
+      h5 {font-size: 1.2rem;}
+      h6 {font-size: 1.0rem;}
+      /* GEOMETRY */
+      hr {
+        border: none;
+        height: 1px;
+        background: linear-gradient(in oklch to right,
+                                    color-mix(in oklch, transparent 90%, var(--gray)),
+                                    var(--gray),
+                                    color-mix(in oklch, transparent 90%, var(--gray))
+                                    );
+      }
+      table thead th {
+        font-weight: bold;
+      }
+      table tbody td:nth-child(1) {
+        background-color: var(--background-HC);
+      }
+      table tbody td:nth-child(2) {
+        background-color: var(--background);
+      }
+      table tbody td:nth-child(3) {
+        background-color: var(--background-1);
+      }
+      table tbody td:nth-child(3) {
+        background-color: var(--background-2);
+      }
+      table tbody td:nth-child(4) {
+        background-color: var(--background-3);
+      }
+      table tbody td:nth-child(5) {
+        background-color: var(--background-4);
+      }
+      table tbody tr:nth-child(1) td {
+        color: var(--red);
+      }
+      table tbody tr:nth-child(2) td {
+        color: var(--orange);
+      }
+      table tbody tr:nth-child(3) td {
+        color: var(--yellow);
+      }
+      table tbody tr:nth-child(4) td {
+        color: var(--green);
+      }
+      table tbody tr:nth-child(5) td {
+        color: var(--cyan);
+      }
+      table tbody tr:nth-child(6) td {
+        color: var(--blue);
+      }
+      table tbody tr:nth-child(7) td {
+        color: var(--purple);
+      }
+      table tbody tr:nth-child(8) td {
+        color: var(--magenta);
       }
     </style>
   </head>
-  <body palette="aequilibrium" palette_type="auto" palette_accent="yellow">
-    <h1 underline>Æquilibrium</h1>
-    <h1>H1</h1>
-    <h2>H2</h2>
-    <h3>H3</h3>
-    <h4>H4</h4>
-    <h5>H5</h5>
-    <h6>H6</h6>
-    <hr>
-    <p>Paragraph with <span style="color:var(--accent);">accented</span> color.</p>
-    <p>GitHub page test. Test? Test. Test!</p>
-    <label>Input text</label>
-    <input type="text"><br>
-    <label>Input password</label>
-    <input type="password">
+  <body palette="aequilibrium" palette_type="auto" palette_accent="yellow" class="join join-vertical h-screen">
+    <div class="navbar bg-base-100 shadow-sm join-item">
+      <div class="navbar-start">
+        <button class="btn btn-square btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg>
+        </button>
+        <h1 class="label text-xl join-item">Æquilibrium</h1>
+        <div class="join join-horizontal my-0 ml-3 text-nowrap">
+          <div class="badge badge-neutral join-item rounded-l-lg rounded-r-none">Version</div>
+          <div class="badge badge-error join-item rounded-l-none rounded-r-lg">pre-alpha</div>
+        </div>
+      </div>
+      <div class="navbar-end">
+
+        <button class="btn btn-square btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path> </svg>
+        </button>
+      </div>
+    </div>
+
+
+
+    <div class="join-item join-vertical h-screen p-3">
+      <div class="label px-3">
+        Color palette
+        <span class="text-rotate">
+          <span>
+            <span>for User Interfaces</span>
+            <span>for on-screen reading</span>
+            <span>to protect your eyes</span>
+          </span>
+        </span>
+      </div>
+      
+    </div>
+
+    <!--
+    <div style="background-color: var(--background); z-index:1" class="sticky top-0 text-center">
+    </div>
+    -->
     
-    <h2 underline>Shades of...</h2>
-    <h3>Background</h3>
-    <p>
-      <div style="background:var(--background)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-      <div style="background:var(--background-1)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-      <div style="background:var(--background-2)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-      <div style="background:var(--background-3)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-      <div style="background:var(--background-4)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-    </p>
-    
-    <h3>Foreground</h3>
-    <p>
-      <div style="background:var(--foreground)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-      <div style="background:var(--foreground-1)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-      <div style="background:var(--foreground-2)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-      <div style="background:var(--foreground-3)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-      <div style="background:var(--foreground-4)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-    </p>
-    
-    <h3>Accents</h3>
-    <p>
-      <div style="background:var(--red)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-      <div style="background:var(--orange)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-      <div style="background:var(--yellow)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-      <div style="background:var(--green)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-      <div style="background:var(--cyan)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-      <div style="background:var(--blue)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-      <div style="background:var(--purple)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-      <div style="background:var(--magenta)">Lorem ipsum <span style="color:var(--background)">Lorem ipsum </span><span style="color:var(--dimmed)">Lorem ipsum </span></div>
-    </p>
+    <div class="join join-vertical lg:join-horizontal my-3">
+      <div class="join-item">
+        <h2 class="text-center">Light</h2>
+        <div class="overflow-x-auto rounded-box border-base-content/5 bg-base-100 m-3">
+          <table class="table table-fixed text-center">
+            <!-- head -->
+            <thead>
+              <tr>
+                <th>High Contrast</th>
+                <th>Default</th>
+                <th>Variant 1</th>
+                <th>Variant 2</th>
+                <th>Variant 3</th>
+              </tr>
+            </thead>
+            <!-- Body -->
+            <tbody>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  
+      <div class="join-item">
+        <h2 class="text-center">Dark</h2>
+        <div palette_type="dark" class="overflow-x-auto rounded-box border-base-content/5 bg-base-100 m-3">
+          <table class="table table-fixed text-center">
+            <!-- head -->
+            <thead>
+              <tr>
+                <th>High Contrast</th>
+                <th>Default</th>
+                <th>Variant 1</th>
+                <th>Variant 2</th>
+                <th>Variant 3</th>
+              </tr>
+            </thead>
+            <!-- Body -->
+            <tbody>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+              <tr>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+                <td>Example</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
   </body>
 </html>

@@ -1,20 +1,36 @@
 # Æquilibrium
 
-A color palette for User Interfaces.
+Una palette di colori per le Interfacce Utente
 
-> ## ⚠️ The project is resized
+> ## ⚠️ Il progetto è stato ridimensionato
 > 
-> The philosophy of the project is compatible with the [DaisyUI](https://github.com/saadeghi/daisyui) project, so I no longer need to "reinvent the wheel".
+> La filosofia del progetto è compatibile con il progetto [DaisyUI](https://github.com/saadeghi/daisyui), quindi non ho più bisogno di "reinventare le ruote".
 > 
-> **From this moment on, this project will be dedicated to the palette.**
+> **Da questo momento il progetto sarà dedicato alla palette.**
 
-## The Problem
+## Il Problema
 
-Text contrast on screens is an important aspect of eye health. However, there is no one-size-fits-all rule:
+Gli utenti che hanno problemi nel distinguere i colori poco contrastati, hanno bisogno di una palette adeguata, altrimenti incorrono nell'affaticamento visivo.
 
-- WCAG AAA guidelines are optimized for the visually impaired, but not for the non visually impaired.
-- Excessive contrast of screens and excessive use of screens increases the visual fatigue. It risks creating new visually impaired people.
-- Preferring a theme regardless of ambient brightness is a bad habit. Listen to your eyes.
+A tal proposito il WCAG richiede un contrasto minimo di 4.5:1
+
+Tuttavia un contrasto eccessivo affatica la vista dei normovedenti:
+
+- Sforzo di adattamento: il forte contrasto costringe la pupilla a lavorare di più, specialmente in ambienti poco illuminati.
+- Alazione (halation): una forte luminosità percepita sborda attorno ai colori scuri, rendendoli meno nitidi e affaticando il sistema visivo. Ad esempio sfondo bianco con testo nero.
+- Immagine residua (afterimage): il forte contrasto percepito satura i fotorecettori della retina.
+
+L'affaticamento visivo diventa un problema anche per i normovedenti.
+
+## La Soluzione
+
+Questa palette di colori cerca una via per rispettare le specifiche WCAG e contemporaneamente fornire una soluzione che riduce l'affaticamento visivo dei normovedenti.
+
+A color palette for:
+- Persone con disabilità visive
+- Normovedenti
+- Diminuire l'affaticamento visivo
+- Diminuire 
 
 ## The Solution
 
