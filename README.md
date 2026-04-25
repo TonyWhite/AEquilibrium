@@ -13,7 +13,7 @@ A color palette for User Interfaces.
 Text contrast on screens is an important aspect of eye health. However, there is no one-size-fits-all rule:
 
 - WCAG AAA guidelines are optimized for the visually impaired, but not for the non visually impaired.
-- Excessive contrast of screens and excessive use of screens increases the visual fatigue. It risks creating new visually impaired people.
+- Excessive contrast with ambient brightness and excessive use of screens increases the visual fatigue. It risks creating new visually impaired people.
 - Preferring a theme regardless of ambient brightness is a bad habit. Listen to your eyes.
 
 ## The Solution
@@ -57,9 +57,7 @@ Currently the documentation is located in the `docs` folder.
 
 ## Features (the goal that I need to reach the version 1.0)
 
-- 
-
-## ToDo
-
 - Finding the same feeling in the entire spectrum and the single color must match with the same perceived contrast with all the gradients of the background.
+- WCAG AAA for High Contrast (HC) variant.
+- WCAG AA for all variants.
 - 
