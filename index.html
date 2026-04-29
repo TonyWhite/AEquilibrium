@@ -330,8 +330,22 @@
           </div>
         </div>
       </div>
-
-      
     </div>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        let tr_list = document.querySelectorAll("div[palette='aequilibrium'] tbody > tr");
+        tr_list.forEach((tr) => {
+          let td_list = tr.querySelectorAll("td");
+          td_list.forEach((td) => {
+            let background = chroma(getComputedStyle(td).getPropertyValue("background")).hex();
+            let foreground = chroma(getComputedStyle(td).getPropertyValue("color")).hex();
+            let contrast = chroma.contrast(background, foreground).toFixed(2);
+            let edited = td.innerHTML + "<br>" + contrast + ":1";
+            td.innerHTML = edited;
+          });
+        });
+      });
+
+    </script>
   </body>
 </html>
