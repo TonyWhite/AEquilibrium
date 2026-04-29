@@ -49,7 +49,6 @@
   --foreground-4:  light-dark(var(--dark-4), var(--light-4));
 
   --accent: var(--foreground);
-  background-color: var(--background);
   color: var(--foreground);
 }
 
