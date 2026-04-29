@@ -62,38 +62,95 @@
       table tbody td:nth-child(5) {
         background-color: var(--background-4);
       }
-      table tbody tr:nth-child(1) td {
+      table.monochrome tbody tr:nth-child(1) td {
+        color: var(--foreground-HC);
+      }
+      table.monochrome tbody tr:nth-child(2) td {
         color: var(--foreground);
       }
-      table tbody tr:nth-child(2) td {
+      table.monochrome tbody tr:nth-child(3) td {
+        color: var(--foreground-1);
+      }
+      table.monochrome tbody tr:nth-child(4) td {
+        color: var(--foreground-2);
+      }
+      table.monochrome tbody tr:nth-child(5) td {
+        color: var(--foreground-3);
+      }
+
+      table.colors tbody tr:nth-child(1) td {
         color: var(--red);
       }
-      table tbody tr:nth-child(3) td {
+      table.colors tbody tr:nth-child(2) td {
         color: var(--orange);
       }
-      table tbody tr:nth-child(4) td {
+      table.colors tbody tr:nth-child(3) td {
         color: var(--yellow);
       }
-      table tbody tr:nth-child(5) td {
+      table.colors tbody tr:nth-child(4) td {
         color: var(--green);
       }
-      table tbody tr:nth-child(6) td {
+      table.colors tbody tr:nth-child(5) td {
         color: var(--cyan);
       }
-      table tbody tr:nth-child(7) td {
+      table.colors tbody tr:nth-child(6) td {
         color: var(--blue);
       }
-      table tbody tr:nth-child(8) td {
+      table.colors tbody tr:nth-child(7) td {
         color: var(--purple);
       }
-      table tbody tr:nth-child(9) td {
+      table.colors tbody tr:nth-child(8) td {
         color: var(--magenta);
+      }
+
+      /* Color Wheel */
+      .donut-graph {
+        /* Geometry */
+        --size: 350px;
+        --hole: 0.50; /* from 0 to 1; when 0: no hole; when 1: no chart */
+        --hole-radious: calc((var(--size)/2) * var(--hole));
+        position: relative;
+        aspect-ratio: 1/1;
+        width: var(--size);
+        height: auto;
+        border-radius: 50%;
+        /* Mask for the hole */
+        mask-image: radial-gradient(black var(--hole-radious), white calc(var(--hole-radious) + 1px) 100%);
+        mask-mode: luminance;
+        mask-composite: subtract;
+        mask-position: center;
+        mask-repeat: no-repeat;
+      }
+      .donut-graph.colors {
+        background: conic-gradient(in oklch,
+                                  var(--red)      0.0% 12.5%,
+                                  var(--orange)  12.5% 25.0%,
+                                  var(--yellow)  25.0% 37.5%,
+                                  var(--green)   37.5% 50.0%,
+                                  var(--cyan)    50.0% 62.5%,
+                                  var(--blue)    62.5% 75.0%,
+                                  var(--purple)  75.0% 87.5%,
+                                  var(--magenta) 87.5%  100%);
+      }
+      .donut-graph.monochrome {
+        background: conic-gradient(in oklch,
+                                  var(--background-HC)  0.0% 10.0%,
+                                  var(--background)    10.0% 20.0%,
+                                  var(--background-1)  20.0% 30.0%,
+                                  var(--background-2)  30.0% 40.0%,
+                                  var(--background-3)  40.0% 50.0%,
+                                  var(--foreground-3)  50.0% 60.0%,
+                                  var(--foreground-2)  60.0% 70.0%,
+                                  var(--foreground-1)  70.0% 80.0%,
+                                  var(--foreground)    80.0% 90.0%,
+                                  var(--foreground-HC) 90.0%  100%);
       }
     </style>
   </head>
-  <body class="join join-vertical h-screen overflow-hidden">
+  <!-- class="join join-vertical h-screen w-screen overflow-hidden" -->
+  <body class="join join-vertical h-screen w-screen overflow-hidden">
     <!-- Navbar -->
-    <div class="navbar bg-base-100 shadow-sm join-item bg-base-200">
+    <div class="navbar bg-base-100 shadow-sm join-item bg-base-200 min-h-fit p-1">
       <div class="navbar-start">
         <!-- Button for drawer and Drawer-->
         <div>
@@ -114,11 +171,11 @@
           </div>
         </div>
 
-        <h1 class="label text-xl join-item pl-2 text-base-content">Æquilibrium</h1>
+        <label class="label text-3xl join-item pl-2 text-base-content">Æquilibrium</label>
         <!-- Badge -->
         <div class="join join-horizontal ml-3 text-nowrap">
-          <div class="badge badge-sm badge-neutral join-item rounded-l-lg rounded-r-none border-base-content bg-base-content text-base-100">Version</div>
-          <div class="badge badge-sm badge-warning join-item rounded-l-none rounded-r-lg">pre-alpha</div>
+          <div class="badge badge-xs badge-neutral join-item rounded-l-lg rounded-r-none border-base-content bg-base-content text-base-100">Version</div>
+          <div class="badge badge-xs badge-warning join-item rounded-l-none rounded-r-lg">pre-alpha</div>
         </div>
       </div>
       <div class="navbar-end">
@@ -159,13 +216,13 @@
             <span>to protect your eyes</span>
           </span>
         </span>
-      </div>
+      </div><br>
 
-      <div class="join join-vertical lg:join-horizontal my-3">
-        <div class="join-item">
-          <h2 class="text-center">Light</h2>
-          <div palette="aequilibrium" palette_type="light" class="overflow-x-auto rounded-box m-3">
-            <table class="table table-fixed text-center">
+      <label class="label w-full text-2xl grid text-center">Monochrome @ Light</label>
+      <div class="flex w-full flex-col lg:flex-row mb-4" palette="aequilibrium" palette_type="light">
+        <div class="grid w-full place-items-center gap-4 p-4">
+          <div class="overflow-x-auto rounded-box">
+            <table class="table monochrome table-fixed text-center">
               <!-- head -->
               <thead>
                 <tr>
@@ -185,6 +242,60 @@
                   <td>Example</td>
                   <td>Example</td>
                 </tr>
+                <tr>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                </tr>
+                <tr>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                </tr>
+                <tr>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                </tr>
+                <tr>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="grid w-full place-items-center">
+          <div class="donut-graph monochrome"></div>
+        </div>
+      </div>
+
+      <label class="label w-full text-2xl grid text-center">Colors @ Light</label>
+      <div class="flex w-full flex-col lg:flex-row mb-4" palette="aequilibrium" palette_type="light">
+        <div class="grid w-full place-items-center gap-4 p-4">
+          <div class="overflow-x-auto rounded-box">
+            <table class="table colors table-fixed text-center">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th>High Contrast</th>
+                  <th>Default</th>
+                  <th>Variant 1</th>
+                  <th>Variant 2</th>
+                  <th>Variant 3</th>
+                </tr>
+              </thead>
+              <!-- Body -->
+              <tbody>
                 <tr>
                   <td>Example</td>
                   <td>Example</td>
@@ -245,11 +356,77 @@
             </table>
           </div>
         </div>
-    
-        <div class="join-item">
-          <h2 class="text-center">Dark</h2>
-          <div palette="aequilibrium" palette_type="dark" class="overflow-x-auto rounded-box m-3">
-            <table class="table table-fixed text-center">
+        <div class="grid w-full place-items-center">
+          <div class="donut-graph colors"></div>
+        </div>
+      </div>
+
+      <label class="label w-full text-2xl grid text-center">Monochrome @ Dark</label>
+      <div class="flex w-full flex-col lg:flex-row mb-4" palette="aequilibrium" palette_type="dark">
+        <div class="grid w-full place-items-center gap-4 p-4">
+          <div class="overflow-x-auto rounded-box">
+            <table class="table monochrome table-fixed text-center">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th>High Contrast</th>
+                  <th>Default</th>
+                  <th>Variant 1</th>
+                  <th>Variant 2</th>
+                  <th>Variant 3</th>
+                </tr>
+              </thead>
+              <!-- Body -->
+              <tbody>
+                <tr>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                </tr>
+                <tr>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                </tr>
+                <tr>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                </tr>
+                <tr>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                </tr>
+                <tr>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                  <td>Example</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="grid w-full place-items-center">
+          <div class="donut-graph monochrome"></div>
+        </div>
+      </div>
+
+      <label class="label w-full text-2xl grid text-center">Colors @ Dark</label>
+      <div class="flex w-full flex-col lg:flex-row mb-4" palette="aequilibrium" palette_type="dark">
+        <div class="grid w-full place-items-center gap-4 p-4">
+          <div class="overflow-x-auto rounded-box">
+            <table class="table colors table-fixed text-center">
               <!-- head -->
               <thead>
                 <tr>
@@ -318,16 +495,12 @@
                   <td>Example</td>
                   <td>Example</td>
                 </tr>
-                <tr>
-                  <td>Example</td>
-                  <td>Example</td>
-                  <td>Example</td>
-                  <td>Example</td>
-                  <td>Example</td>
-                </tr>
               </tbody>
             </table>
           </div>
+        </div>
+        <div class="grid w-full place-items-center">
+          <div class="donut-graph colors"></div>
         </div>
       </div>
     </div>
