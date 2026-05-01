@@ -512,6 +512,7 @@
     <script>
       window.addEventListener("DOMContentLoaded", () => {
         let tr_list = document.querySelectorAll("[palette='aequilibrium'] tbody > tr");
+        // Update all tables with contrast
         tr_list.forEach((tr) => {
           let td_list = tr.querySelectorAll("td");
           td_list.forEach((td) => {
