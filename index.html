@@ -221,8 +221,6 @@
         </span>
       </div><br>
 
-      <div id="main" class="echart" style="height:100%;width:100%"></div>
-
       <label class="label w-full text-2xl grid text-center">Monochrome @ Light</label>
       <div class="flex w-full flex-col lg:flex-row mb-4" palette="aequilibrium" palette_type="light">
         <div class="grid w-full place-items-center gap-4 p-4">
@@ -279,9 +277,12 @@
             </table>
           </div>
         </div>
+        <div id="main" class="grid w-full h-100 place-items-center"></div>
+        <!-- 
         <div class="grid w-full place-items-center">
           <div class="donut-graph monochrome"></div>
         </div>
+        -->
       </div>
 
       <label class="label w-full text-2xl grid text-center">Colors @ Light</label>
@@ -510,6 +511,14 @@
       </div>
     </div>
     <script>
+      // Manage echarts in an array!
+      document.echarts = [];
+
+      function getNewEChartFromID(eID) {
+        document.echarts.push(echarts.init(document.getElementById(eID)));
+        return document.echarts[document.echarts.length-1];
+      }
+
       window.addEventListener("DOMContentLoaded", () => {
         let tr_list = document.querySelectorAll("[palette='aequilibrium'] tbody > tr");
         // Update all tables with contrast
@@ -524,11 +533,9 @@
           });
         });
 
-        // Initialize the echarts instance based on the prepared dom
-        let myChart = echarts.init(document.getElementById('main'));
-        myChart.addEventListener('resize', () => {
 
-        });
+        // Initialize the echarts instance based on the prepared dom
+        let myChart = getNewEChartFromID("main");
 
         // Specify the configuration items and data for the chart
         let option = {
@@ -557,9 +564,8 @@
         });
 
         window.addEventListener("resize", () => {
-          let echarts = document.querySelectorAll(".echart");
-          echarts.forEach((chart) => {
-            
+          document.echarts.forEach((chart) => {
+            chart.resize();
           });
         });
     </script>
